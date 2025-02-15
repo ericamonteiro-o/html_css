@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* Introdução ao CSS e Box Model
+
+    CSS (acrônimo p/ Cascading Style Sheets) -> 
+    Linguagem de estilo que modifica a 
+    aparência do documento HTML.
+
+    Box-model -> conceito do CSS que retrata os 
+    elementos HTML como caixas retangulares.Um 
+    elemento é formado pelo conteúdo (formado pela 
+    width e height), padding, border e
+    margin. Os lados da "caixa" são o top, right,
+    bottom e left (sentido horário, do relógio)
+
+    padding -> espaçamento interno
+    margin -> espaçamento externo
+
+    aplicando valores em uma só propeidade:
+    padding: top,right, bottom, left | top e bottom,
+    right e left | all 
+
+    aplicando valores em propriedades p/ cada lado:
+    padding-top
+    padding-right
+    padding-left
+    padding-bottom
+
+    Box-sizing -> propriedade que controla como será
+    calculada as dimensões totais do elemento
+
+    content-box: padrão. Padding e border não
+    são incluidos no cálculo.
+
+    border-box: padding e border são incluídos
+    no cálculo, não influenciando na width e height
+    que eu definir.
+
+    margin e padding 0 zeram m e p padrão dos 
+    elementos (seletor * universal seleciona TODOS 
+    el.)
+    */
+    *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .section-one {
+            background-color: deeppink;
+            /*adiciona imagem de fundo ao elemento */
+            background-image: url("https://s2-monet.glbimg.com/X9W5oXNxa26jGaF1cqwPigIm334=/0x0:1400x735/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e7c91519bbbb4fadb4e509085746275d/internal_photos/bs/2025/c/7/BwFBQESSA1X6WW6Olfxg/drake-kendrick.png");
+            /* background-size -> controla tamanho
+            da img de fundo */
+            background-size: cover;
+            /* especifica osição da imagem dentro do 
+            elemento */
+            background-position: center center;
+            color: #000000;
+            border: 5px solid black;
+            width: 400px;
+            height: 200px;
+            margin: 20px;
+        }
+
+        .section-two {
+            background: cyan;
+            border: 1px solid red;
+            border-style: solid;
+            border-width: 5px;
+            border-bottom-color: red;
+            border-top-color: blue;
+            border-left-color:yellow;
+            border-right-color: green;
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, optio sit! Quo consequuntur eaque in accusamus alias tenetur, placeat neque nam laudantium eius reiciendis exercitationem ipsum, omnis animi vitae obcaecati?
+    </section>
+    <section class="section-two">2</section>
+</body>
+</html>

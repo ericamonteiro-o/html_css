@@ -1,0 +1,249 @@
+<!--
+Separando o HTML e CSS em arquivos diferentes
+Tipos de declaração do CSS:
+- Inline;
+- Interno;
+- Externo (forma mais usada; por questões de 
+manutenibilidade e reutilização de código)
+
+assets -> 
+
+
+Seletores básicos do CSS
+sintaxe: seletor { propriedade: valor; }
+
+* -> seletor universal; usado geralmente p/
+zerar os estilos
+
+elemento -> seletor de elemento
+
+elemento elemento2 -> seleciona elemento2 que é
+descendente de elemento
+
+elemento1, elemento2 -> seleciona os dois
+
+.class.class -> seleciona elemento que possui os 
+dois 
+
+elemento > filho -> seleciona filhos diretos
+
++ -> seleciona irmão adjacente
+
+~ -> seleciona irmãos no geral
+
+seletor de atributo com ^ -> cata atributo que 
+começa com valor
+* -> cata atributo que contém
+
+***
+~ -> seleciona atributo que tenha o valor
+| -> requer que atributo "-" depois do primeiro nome
+$ -> 
+
+
+Pseudo-classes
+transition -> propriedade muda o estilo de forma
+suave
+
+:hover -> aplica estilo quando passar mouse pelo
+elemento
+:link -> não foi visitado ainda
+:visited -> já foi visitado
+:active -> quando clicar no elemento
+:focus -> quando elemento estiver em foco
+(ex.: input selecionado)
+:enabled
+:disabled
+:checked
+:not() -> seletor de negação (selecione X menos esse
+(o que está dentro do not()))
+:first-child / :last-child
+:nth-child -> seleciona grupo de irmãos específicos
+
+
+Pseudo-elementos
+::before -> adiciona elemento antes
+::after -> adiciona elemento depois
+::first-letter
+::selection -> ao selecionar elemento
+::first-line
+::placeholder
+
+
+Especificidade CSS
+Ordem do maior pro menor:
+- !important (não use!)
+- CSS Inline (style="")
+- ID
+- Class, atributos e pseudo-classes
+- Elementos e pseudo-elementos
+
+Quando há um "empate" quem prevalece é a última regra.
+
+Ao passar o mouse em cima do elemento, aparece o 
+cálculo de especificidade (0,0,0)
+
+Herança e as propriedades que são passadas de pai p/
+filho
+caniuse.com
+specify calculator
+
+Geralemnte são herdadas propriedades de texto
+
+
+
+Float e Display
+Modo utilizado antigamente 
+display:inline ->
+display:block ->
+display:inline-block ->
+
+clear -> 
+
+width: 33.33% -> divide layout em 3 cols de 100% (
+com 30px de margin em cada coluna)
+
+
+Cores CSS
+- hexadecimal (vai de 0 - 9 e de A -F) -> 3 canais 
+#000000 -> canais iguais podem ser abreviados #000
+#000000 -> preto
+#ffffff -> branco
+
+- não usar nome de cor (so tem 140 cores)
+
+- rgb (0, 0, 0)
+0 -> preto
+255 -> branco
+- rgba 
+o a é de alpha; define opacidade (0 - transparente 
+total, 1 totalmente opaco)
+- hsl / hsla
+
+
+Unidades de medida no CSS
+Absoluta (fixas, n mudam)
+- px (única usada) 
+
+Relativas (flexíveis, baseadas em outros elementos
+- em
+- rem
+- %
+- vw / vh
+vmin / vmax -> se baseiam no menor e maior
+tamanho de tela no momento (ninguém usa)
+
+
+Propriedades para textos
+direction rtl -> inverte texto p/ direita
+text-shadow: x y blur color;
+
+
+Position (propriedade)
+Valores:
+- relative
+- absolute
+- sticky
+- fixed
+
+propriedades de deslocamento ->
+top, right, left, bottom
+
+bão p/ criar janela modal -> width 100%, height 100% e
+position absolute
+
+
+Media queries e breakpoints
+#media são regras CSS (como condicionais) que mudam
+a estrutura do layout quando determinada condição
+for verdadeira
+
+breakpoints mais usados (tamanho da tela do
+dispositivo) ->
+
+
+Border-radius
+Arredonda os elementos nos cantos (ou
+forma círculo perfeito com w e h de mesmo tamanho e
+border-radius: 50%;)
+
+
+Box-shadow
+mesma coisa do text-shadow, max aplica-se ao elemento
+(depois da borda) e não ao texto
+
+
+Flexbox
+Ajuda a estruturar os itens de forma flexível
+
+Propriedades de container
+- display: flex
+- flex-direction -> muda a direção do eixo principal
+- justify-content
+- align-items
+- align-content
+- flex-wrap
+- flex-flow
+
+Propriedades de item
+- flex (abreviação de grow, shrink, basis)
+- align-self
+- order
+
+main-axis -> eixo principal (por padrãp "row")
+cross-axis -> eixo perpendicular
+
+
+CSS Grid
+É própria para criar "grades" como se fosse uma
+tabela (com linhas e colunas).
+
+Propriedades de container:
+- display: grid
+- grid-template-columns
+    Posso usar junto com:
+    - fr -> medida flexível (1 fragmento)
+    - repeat()
+    - minmax() -> o tamanho minimo e o tamanho máximo q a coluna pode ter
+    - auto-fill -> preenchimento de col. automático
+    ex.: grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    - alias -> ex.: grid-template-columns: [um] 1fr [dois] 1fr [tres] 1fr [quatro];
+
+- grid-template-rows (n mt usado)
+- gap (espaçamento entre linhas e cols)
+shortcut de row-gap e column-gap
+- grid-template-areas: coloca nomes para as áreas e eu
+ posso colocar essas áreas onde eu quiser.
+
+
+
+Propriedades de itens:
+MESCLAR ITENS:
+- grid-column-start / grid-row-start
+- grid-column-end / grid-row-end
+- grid-row / grid-column (propriedades anteriores abreviadas)
+- grid-area: grid-row-start, grid-column-start, 
+grid-row-end, grid-column-end;
+ex.  grid-area: um / um / quatro / quatro;
+
+Dica do prof: opte por usar grid-column e grid-row +
+ span no elemento especifico e auto-fill + repeat no 
+grid-template-columns no container pai
+
+*-end é EXCLUSIVE
+
+span -> ocupa
+
+valor auto: coluna se ajusta ao conteúdo
+
+
+Transform e animation***
+Não é muito bom ter vários arquivos CSS, porque o site
+tem que fazer várias requisições 
+
+rel="nofollow"
+
+
+Emmet Abbreviation***
+
+*/

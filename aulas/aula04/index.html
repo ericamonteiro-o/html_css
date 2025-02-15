@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link> vincula arquivos externos (neste caso
+     CSS)-->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importa um arquivo JavaScript externo -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Exemplo de <datalist> -->
+    <section>
+        <h2>Lista de Sugestões com Datalist</h2>
+        <label for="linguagem">Escolha uma linguagem:</label>
+        <input list="linguagens" id="linguagem" name="linguagem">
+        <!-- <datalist> fornece sugestões para um campo de entrada -->
+        <datalist id="linguagens">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="JavaScript">
+            <option value="Python">
+            <option value="Java">
+        </datalist>
+    </section>
+
+    <!-- Exemplo de <details> e <summary> -->
+    <section>
+        <h2>Detalhes Interativos</h2>
+        <!-- <details> cria uma seção expansível -->
+        <details>
+            <!-- <summary> define o título que o usuário pode clicar -->
+            <summary>Clique para ver mais detalhes</summary>
+            <p>Esta é uma seção oculta que pode ser expandida!</p>
+        </details>
+    </section>
+
+    <!-- Exemplo de <dialog> -->
+    <section>
+        <h2>Caixa de Diálogo</h2>
+        <button id="openDialog">Abrir Diálogo</button>
+        <!-- <dialog> cria uma caixa de diálogo modal -->
+        <dialog id="meuDialog">
+            <p>Este é um exemplo de diálogo nativo do HTML.</p>
+            <button id="closeDialog">Fechar</button>
+        </dialog>
+    </section>
+
+    <!-- audio e video -->
+    <h2>Áudio</h2>
+    <audio controls>
+        <!-- source -> p/ colocar diferentes fontes -->
+        <source src="audio.mp3" type="audio/mpeg"> <!-- Fonte do áudio em MP3 -->
+        <source src="audio.ogg" type="audio/ogg"> <!-- Fonte alternativa -->
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <h2>Vídeo</h2>
+    <video controls width="400">
+        <source src="video.mp4" type="video/mp4"> <!-- Fonte do vídeo em MP4 -->
+        <source src="video.ogg" type="video/ogg"> <!-- Fonte alternativa -->
+        Seu navegador não suporta vídeos.
+    </video>
+
+    <!-- Exemplo de <iframe> -->
+    <section>
+        <h2>Incorporação de Página com iframe</h2>
+        <!-- <iframe> é usado para incorporar outra página dentro da página atual -->
+        <iframe src="https://www.example.com" width="600" height="300" title="Site Exemplo"></iframe>
+    </section>
+
+    <!-- Exemplo de <svg> -->
+    <section>
+        <h2>Gráfico SVG</h2>
+        <!-- SVG é um formato para gráficos vetoriais escaláveis -->
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+        </svg>
+    </section>
+    <!--
+    address -> Tag semântica p/ por endereços
+    
+    hr -> linha horizontal
+    br -> quebra linha
+    -->
+    <address>
+        <p>Escrito por: João Silva</p>
+        <hr />
+        <p>Email: <a href="mailto:joao@email.com">joao@email.com</a></p><br />
+        <p>Endereço: Rua Exemplo, 123 - São Paulo, Brasil</p>
+    </address>
+
+    <!-- <div> é um contêiner genérico (de bloco) para
+         agrupar elementos 
+        
+    -->
+    <div style="background-color: lightgray; padding: 10px;">
+        <!-- span -> container genérico inline -->
+        <p>Esta é uma <span style="color: red;">palavra em destaque</span> dentro de um parágrafo.</p>
+    </div>
+
+    <!-- -->
+    <figure>
+        <img src="imagem.jpg" alt="Exemplo de uma bela paisagem" width="300">
+        <figcaption>Uma bela paisagem ao entardecer.</figcaption> <!-- Legenda da imagem -->
+    </figure>
+
+    <!-- Lista de definição -->
+    <dl>
+        <dt>HTML</dt> <!-- Termo a ser definido -->
+        <dd>Linguagem de marcação usada para estruturar páginas web.</dd> <!-- Definição -->
+
+        <dt>CSS</dt>
+        <dd>Linguagem de estilos usada para estilizar páginas web.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para adicionar interatividade às páginas.</dd>
+    </dl>
+
+    <!-- <pre> mantém a formatação do texto, incluindo 
+        quebras de linha -->
+    <pre>
+        <code>
+function olaMundo() {
+console.log("Olá, Mundo!");
+}
+        </code>
+    </pre>
+
+    <!--
+    Tags p/ criar layout semântico
+    -->
+    <!-- header -> cabeçalho da página ou seção -->
+    <header>
+        <h1>Meu Site</h1>
+        <!-- nav -> p/ criar menu de navegação -->
+        <nav>
+            <!-- tag âncora, cria links
+                 por padrão o target é _self 
+
+                 _blank -> abre noutra aba
+
+                 title -> mostra dica ao passar o mouse
+                 em cima
+                 -->
+            <a href="#" target="_blank">Home</a> |
+            <a href="#" title="testando som">Sobre</a> |
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <!-- main -> conteúdo principal -->
+    <main>
+        <!-- section -> seção temática "genérica"-->
+        <section>
+            <h2>Seção de Notícias</h2>
+            <!-- article -> conteúdo independente e
+                 autossuficiente -->
+            <article>
+                <h3>Notícia Importante</h3>
+                <!-- <p> parágrafo
+                <strong> negrito semântico
+                <em> itálido semântico
+                <del> deletado semântico
+                <ins> sublinhado semântico 
+                
+                <small> texto pequeno
+                <sub> subscrito
+                <sup> sobrescrito
+                -->
+                <p>Este é um <strong>parágrafo</strong> com um texto em negrito.</p>
+                <p>Podemos <ins>também</ins> usar <em>itálico</em> para dar ênfase.</p>
+                <p>Texto <mark>destacado</mark> <del>para</del> chamar atenção.</p>
+                <!-- citação de bloco -->
+                <blockquote cite="https://wikipedia.com">
+                    "Isso é uma citação longa retirada de uma fonte."
+                </blockquote>
+                <!-- citação de linha -->
+                <q>Isso é uma <small>citação</small> curta.</q>
+            </article>
+        </section>
+
+        <section>
+            <h2>Imagem Exemplo</h2>
+            <!-- img -> coloca img na pag.
+                 alt -> texto lido por leitores de tela
+                 e tbm aparece se img não carregar -->
+            <img src="imagem.jpg" alt="Descrição da imagem" width="300">
+        </section>
+    </main>
+
+    <!-- aside -> conteúdo secundário -->
+    <aside>
+        <h3>Links úteis</h3>
+        <!-- ul -> lista não ordenada
+             li -> item de lista
+             ol -> lista ordenada
+             -->
+        <ul>
+            <li><a href="#">Recurso 1</a></li>
+            <li><a href="#">Recurso 2</a></li>
+        </ul>
+    </aside>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

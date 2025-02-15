@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+    O * é um seletor global que afeta todos os elementos.
+
+    O body {} afeta somente o elemento <body> da página
+    (e  elementos que por padrão herdam, como 
+    propriedades de texto)
+    */
+        body {
+            font-family: sans-serif;
+        }
+
+        table th,
+        table td {
+            text-align: left;
+            border: 2px solid #ccc;
+            padding: 10px;
+        }
+
+        table caption {
+            /* muda posição da caption */
+            caption-side: bottom;
+            text-align: left;
+            font-style: italic;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        table {
+            /* border-collapse: collapse -> some com a 
+            borda dupla*/
+            border-collapse: collapse;
+            width: 800px;
+        }
+
+        tfoot td,
+        table th {
+            background: #ddd;
+        }
+
+        tfoot td {
+            font-style: italic;
+        }
+
+        .responsive-table {
+            max-width: 100%;
+            /* adiciona barra de rolagem 
+            horizontal */
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Tabelas HTML 
+     
+    Eram usadas antigamente p/ fazer o layout dos sites
+
+    <tr> -> linha da tabela
+    <td> -> célula da tabela
+    <th> -> célula de cabeçalho
+    <thead> -> container semantico pro cabeçalho da
+    <tbody> -> container semantico pro corpo da
+    <tfoot> -> container semantico pro rodapé da
+    tabela
+    -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="responsive-table">
+        <table>
+            <caption>este é uma descrição da tabela</caption>
+            <thead>
+                <tr>
+                    <th>Coluna 1</th>
+                    <th>Coluna 2</th>
+                    <th>Coluna 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>conteúdo 1</td>
+                    <td>conteúdo 2</td>
+                    <!--
+                    rowspan -> controla espaço que célula ocupa verticalmente
+
+                    colspan -> controla espaço que célula ocupa horizontalmente
+                    
+                    -->
+                    <td rowspan="2">conteúdo 3</td>
+                </tr>
+                <tr>
+                    <td colspan="2">conteúdo 4</td>
+                </tr>
+                <tr>
+                    <td>conteúdo 7</td>
+                    <td>conteúdo 8</td>
+                    <td>conteúdo 9</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>conteúdo 10</td>
+                    <td>conteúdo 11</td>
+                    <td>conteúdo 12</td>
+                </tr>
+            </tfoot>
+        </table>
+</body>
+
+</html>

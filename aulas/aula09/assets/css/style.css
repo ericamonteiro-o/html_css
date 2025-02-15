@@ -1,0 +1,239 @@
+/* Seletores básicos do CSS */
+
+/* Zerando m e p dos elementos 
+
+Selecionador Universal (*): Aplica as regras a todos os
+ elementos da página.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* seletor de class */
+.classe-interior{
+    transition: all 300ms ease-in-out;
+}
+
+/* seletor de elemento */
+a{
+    color:orange;
+}
+
+/* Seletores Combinados (descendentes): Este seletor 
+aplica o estilo a todos os elementos <a> que estão dentro 
+de um <li>*/
+li a {
+
+}
+/* Seletores Agrupados: Aplica o estilo tanto ao elemento
+ <ul> quanto ao elemento <li> */
+ul, li {
+
+}
+/* Seletores de Irmão Geral (~): Aplica o estilo a 
+qualquer elemento <ul> que seja irmão de um elemento 
+<div>, ou seja, um <ul> que venha depois de um <div> no
+ HTML */
+div ~ ul {
+    
+}
+/*
+Seletores de Irmão Adjacente (+): Aplica o estilo ao 
+elemento <ul> que é imediatamente após um elemento <div>
+*/
+div + ul {
+
+}
+
+/* 
+Seletores de Filho Direto (>): Aplica o estilo a qualquer
+ <ul> que seja um filho direto de um <div>.
+
+*/
+div > ul {
+
+}
+/* 
+Seletores de Elemento e Classe (h1.classe): Aplica o estilo a qualquer elemento <h1> que tenha a classe classe.
+*/
+h1.classe{
+
+}
+/*
+Seletores de Múltiplas Classes (.classe.classe2): Aplica 
+o estilo a qualquer elemento que tenha ambas as classes 
+classe e classe2.
+*/
+.classe.classe2{
+
+}
+
+/* seletor de id */
+#id {
+
+}
+
+/* Seletor de Pseudo-classes */
+/* Seletor de Pseudo-classes */
+
+/* Seletor para o estado do link quando o usuário passa o mouse sobre ele */
+a:hover{
+    background: darkslateblue;  /* Cor de fundo quando o link é hover */
+    color: white;               /* Cor do texto quando o link é hover */
+    text-decoration: none;      /* Remove o sublinhado padrão do link */
+}
+
+/* Seletor para o estado de links que ainda não foram clicados */
+a:link{
+    color: darkcyan;   /* Cor do link não clicado */
+}
+
+/* Seletor para o estado de links que já foram visitados */
+a:visited{
+    color: darkgoldenrod;  /* Cor do link visitado */
+}
+
+/* Seletor para o estado do link quando ele está sendo clicado */
+a:active{
+    background: cyan;      /* Cor de fundo enquanto o link está sendo clicado */
+    color: greenyellow;    /* Cor do texto enquanto o link está sendo clicado */
+}
+
+/* Seletor para o estado do campo de input quando ele está em foco (quando o usuário clica nele ou navega até ele) */
+input:focus{
+    box-shadow:  0 0 15px rgba(0,206,209,1.0);  /* Sombra ao redor do campo */
+    outline: none;                              /* Remove o contorno padrão do campo */
+    border: 1px solid rgba(0,0,0,0.5);          /* Borda fina do campo em foco */
+}
+
+/* Seletor para o estado de um campo de input desativado */
+input:disabled{
+    background-color: blueviolet;  /* Cor de fundo de um campo desativado */
+    cursor: not-allowed;           /* Muda o cursor para "não permitido" */
+}
+
+/* Seletor que aplica um estilo ao parágrafo imediatamente após um input que está marcado (checkbox ou radio) */
+input:checked + p{
+    width: 100px;                 /* Define a largura do parágrafo */
+    height: 100px;                /* Define a altura do parágrafo */
+    background-color: aquamarine; /* Cor de fundo do parágrafo */
+}
+
+/* Seletor que aplica um estilo ao primeiro item de uma lista dentro de um elemento com a classe .pai */
+.pai .lista li:first-child{
+    background-color: blueviolet; /* Cor de fundo do primeiro item */
+}
+
+/* Seletor que aplica um estilo ao último item de uma lista dentro de um elemento com a classe .pai */
+.pai .lista li:last-child{
+    background-color: cadetblue; /* Cor de fundo do último item */
+}
+
+/* Seletor que aplica estilo a campos de input obrigatórios */
+input:required{
+    border-radius: 10px;   /* Bordas arredondadas para o campo */
+    border-color: aqua;    /* Cor da borda */
+}
+
+/* Seletor para parágrafos que não possuem a classe 'meio' */
+p:not(.meio){
+    color: aqua;   /* Cor do texto de parágrafos que não têm a classe 'meio' */
+}
+
+/* Seletor que aplica um estilo ao parágrafo imediatamente após um input não marcado (checkbox ou radio) */
+input:not(:checked) + p{
+    background-color: blueviolet; /* Cor de fundo do parágrafo quando o input não está marcado */
+}
+
+/* Seletor que aplica um estilo aos itens ímpares de uma lista */
+ul li:nth-child(odd){
+    background-color: blueviolet; /* Cor de fundo para itens ímpares */
+    list-style: none;             /* Remove a marcação padrão da lista */
+}
+
+/* Seletor que aplica um estilo aos itens pares de uma lista */
+ul li:nth-child(even){
+    background-color: aqua;      /* Cor de fundo para itens pares */
+    list-style: none;            /* Remove a marcação padrão da lista */
+}
+
+/* Seletor para aplicar um estilo ao item de lista que é o 3º, 5º, 7º, etc., ou seja, todo item que for de índice 2n+3 */
+.lista-intervalo li:nth-child(2n+3){
+    background-color: brown;  /* Cor de fundo para o item na posição 2n+3 */
+}
+
+/* Seletor de atributo */
+
+/* Seletor para elementos com o atributo "checked" */
+[checked] {
+    background-color: coral;  /* Aplica a cor de fundo coral aos elementos que possuem o atributo "checked" */
+}
+
+/* Seletor para inputs do tipo "checkbox" */
+input[type="checkbox"] {
+    background-color: coral;  /* Aplica a cor de fundo coral aos inputs do tipo checkbox */
+}
+
+/* Seletor para elementos com o atributo "meu-atributo" cujo valor começa com "valor" */
+[meu-atributo^="valor"]{
+    /* Aplica estilo aos elementos onde o atributo "meu-atributo" começa com "valor" */
+}
+
+/* Seletor para elementos com o atributo "meu-atributo" cujo valor contém "valor" em qualquer parte */
+[meu-atributo*="valor"]{
+    /* Aplica estilo aos elementos onde o atributo "meu-atributo" contém "valor" em qualquer lugar do valor */
+}
+
+/* Seletor para elementos com o atributo "meu-atributo" cujo valor termina com "valor" */
+[meu-atributo$="valor"]{
+    /* Aplica estilo aos elementos onde o atributo "meu-atributo" termina com "valor" */
+}
+
+/* Seletor para elementos com o atributo "meu-atributo" cujo valor é exatamente "valor" ou uma lista separada por hífens que começa com "valor" */
+[meu-atributo|="valor"]{
+    /* Aplica estilo aos elementos onde o atributo "meu-atributo" começa com "valor" ou tem "valor" como uma parte de uma lista separada por hífens */
+}
+
+/* Seletor de pseudo-elementos */
+
+/* Adiciona conteúdo após cada item de lista (li) dentro
+ de um ul */
+ul li::after{
+    content: '-';                /* Adiciona um hífen após o conteúdo do li */
+    background-color: cadetblue;  /* Cor de fundo do hífen */
+    color: #fff;                 /* Cor do texto do hífen */
+}
+
+/* Adiciona conteúdo antes de cada item de lista (li)
+ dentro de um ul */
+ul li::before{
+    content: '-';                /* Adiciona um hífen antes do conteúdo do li */
+    background-color: cadetblue;  /* Cor de fundo do hífen */
+    color: #fff;                 /* Cor do texto do hífen */
+}
+
+/* Seletor para estilizar a primeira letra de um parágrafo com a classe .paragrafo-destaque */
+.paragrafo-destaque::first-letter{
+    font-size: 150px;            /* Tamanho da fonte da primeira letra */
+    display: block;              /* Faz a primeira letra ser exibida como um bloco */
+    float: left;                 /* Faz a primeira letra flutuar à esquerda */
+    margin: 0 10px 10px 0;       /* Adiciona uma margem à direita e embaixo da primeira letra */
+}
+
+/* Seletor para estilizar a primeira linha de um parágrafo com a classe .paragrafo-destaque */
+.paragrafo-destaque::first-line{
+    background-color: aqua;  /* Cor de fundo para a primeira linha do parágrafo */
+}
+
+/* Seletor para estilizar a seleção de texto dentro de um parágrafo com a classe .paragrafo-destaque */
+.paragrafo-destaque::selection{
+    background-color: aquamarine;  /* Cor de fundo ao selecionar o texto */
+    color: purple;                 /* Cor do texto ao ser selecionado */
+}
+
+/* Seletor para estilizar o texto dentro do placeholder de um input ou textarea */
+::placeholder{
+    color: rgb(11, 131, 91);  /* Cor do texto do placeholder */
+}

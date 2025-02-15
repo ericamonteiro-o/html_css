@@ -1,0 +1,15 @@
+/* root além de html também se referem ao elemento
+<html>, porém root tem especificidade maior
+
+Ela é usada principalmente para definir variáveis CSS 
+globais e ajustar estilos que se aplicam a toda a 
+página.
+*/
+:root {
+    --primary-color: #0A1128;
+    --white-color: #FFFFFF;
+    --light-gray-color: #EEEEEE;
+    --secondary-color: crimson;
+    /* espaçamento padrão */
+    --gap: 3rem;
+}

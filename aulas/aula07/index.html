@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Formuários e Inputs 
+     action="" -> p/ onde vou mandar o form
+method="" -> método http (get ou post)
+target="_blank" -> se eu quero que ele carregue noutra aba
+autocomplete="off" -> desativa o autocomplete
+<fieldset> -> agrupa campos de formulário
+
+outros types="":
+date -> tipo p/ colocar data (padrão dos EUA mes/dia/ano)
+datetime -> data e hora 
+time -> hora
+color -> valor em hexadecimal
+email,
+file -> p/ enviar arquivo
+accept="" especifica tipos aceitos
+number (pode usar min, step e max p/ validar, tal qual
+minlength e maxlength com text),
+hidden,
+password,
+range (faixa),
+url,
+search
+
+<select name=""> -> grupo de opções
+<option value=""> e <optiongroup> (agrupa oções)
+<textarea> -> campo de texto multilinha
+    -->
+    <form action="" method="get" autocomplete="off" target="_blank">
+        <!-- Título do formulário -->
+        <p>Meu formulário</p>
+
+        <!-- label -> rótulo semântico -->
+        <label for="name">Nome:</label>
+        <!-- Campo de texto para o nome -->
+        <input type="text" name="name" id="name" placeholder="O seu nome">
+
+        <p>
+            <!-- Checkbox adiciona caixa pra marcar 
+         
+        <input> -> campo de entrada (os types mais usados é
+text e number)
+name="" -> propriedade é usada no back-end associada
+ao valor digitado
+placeholder="" -> dica do que digitar no campo
+value="" -> valor padrão (caso a pessoa n digite)
+        -->
+            <label for="dev">Sou um dev</label>
+            <input type="checkbox" id="dev" name="dev" checked="checked" value="sim">
+        </p>
+
+        <p>
+            <!-- Opções de rádio para marcar
+         
+
+readonly -> o user pode ver mas n pode editar
+
+button type="reset" -> limpa form
+button type="submit" -> submete o form
+
+<label> rótulo semântico
+for="ID" -> coloca foco no input se eu clicar no label
+checked -> marcado por padrão
+required -> é obrigatório preencher (bom validar no
+back-end também)
+checkbox -> caixa de marcação
+radio -> grupo de opções associadas p/ marcar (possuem
+o mesmo name="") 
+        -->
+            <label for="gnr_masc" name="genero_radio">masculino</label>
+            <input type="radio" name="genero_radio" id="gnr_masc" value="masculino"><br>
+            <!-- Outro radio -->
+            <label for="gnr_feminino">feminino</label>
+            <input type="radio" name="genero_radio" id="gnr_feminino" value="feminino"><br>
+            <!-- Outro radio -->
+            <label for="gnr_outro">Outro</label>
+            <input type="radio" name="genero_radio" id="gnr_outro" value="Outro"><br>
+        </p>
+
+        <p>
+            <!-- Campo para selecionar uma data -->
+            <label for="data">Selecione a data</label>
+            <input type="date" name="data" id="data" value="2001-04-18">
+        </p>
+
+        <p>
+            <!-- Campo para selecionar data e hora -->
+            <label for="data_tempo">informe data e hora</label>
+            <input type="datetime-local" name="data_tempo" id="data_tempo" value="2001-04-18T14:00">
+        </p>
+
+        <p>
+            <!-- Campo para selecionar apenas a hora -->
+            <label for="tempo">informe a hora</label>
+            <input type="time" name="tempo" id="tempo" value="14:00:01">
+        </p>
+
+        <p>
+            <!-- Campo para escolher uma cor -->
+            <label for="cor">Selecione uma cor</label>
+            <input type="color" name="cor" id="cor" value="#0DEA8C">
+        </p>
+
+        <p>
+            <!-- Campo para inserir um e-mail -->
+            <label for="email">informe a hora</label>
+            <input type="email" name="email" id="email" placeholder="exemplo@gmail.com">
+        </p>
+
+        <p>
+            <!-- Campo para fazer upload de arquivos -->
+            <label for="file">envie seu arquivo aqui</label><br>
+            <input type="file" name="file" id="file" accept=".png,.svg,images/*" multiple>
+        </p>
+
+        <p>
+            <!-- Campo para inserir um número -->
+            <label for="number">input Number</label>
+            <input type="number" name="number" id="number" placeholder="digite um número" min="0" max="100" step="5">
+        </p>
+
+        <p>
+            <!-- Campo para inserir uma senha -->
+            <label for="senha">sua senha</label>
+            <input type="password" name="senha" id="senha" placeholder="digite sua senha">
+        </p>
+
+        <p>
+            <!-- Campo de seleção de intervalo (range) -->
+            <label for="range">testando input range</label>
+            <input type="range" name="range" id="range" min="0" max="20" step="2" list="tickmarks">
+
+            <!-- Definindo marcações (ticks) para o input range -->
+            <datalist id="tickmarks">
+                <option value="0" label="0%">
+                <option value="10">
+                <option value="20">
+                <option value="30">
+                <option value="40">
+                <option value="50" label="50%">
+                <option value="60">
+                <option value="70">
+                <option value="80">
+                <option value="90">
+                <option value="100" label="100%">
+            </datalist>
+        </p>
+
+        <p>
+            <!-- Campo para inserir uma URL -->
+            <label for="url">sua url:</label>
+            <input type="url" name="url" id="url" placeholder="digite uma url">
+        </p>
+
+        <p>
+            <!-- Campo de pesquisa -->
+            <label for="search">sua pesquisa:</label>
+            <input type="search" name="search" id="search" placeholder="pesquisar">
+        </p>
+
+        <p>
+            <!-- Campo de seleção com um menu suspenso -->
+            <label for="select">selecione um item:</label><br>
+            <select name="select" id="select">
+                <optgroup label="categoria 1">
+                    <option value="val_tetorno" label="valor mostrado">
+                    <option value="val_tetorno2" label="valor mostrado2" selected>
+                    <option value="val_tetorn3" label="valor mostrado" 3 disabled>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <!-- Campo de texto multilinha (textarea) -->
+            <label for="textarea">sua text area</label>
+            <textarea name="textarea" id="textarea" maxlength="255">valor padrão</textarea>
+        </p>
+
+        <p>
+            <!-- Botões de reset e submit -->
+            <button type="reset">reset</button>
+            <button type="submit">enviar</button>
+        </p>
+    </form>
+
+</html>

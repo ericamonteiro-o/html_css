@@ -1,0 +1,55 @@
+/*
+Especificidade no CSS
+A especificidade é uma regra do CSS que determina quais 
+declarações de estilo serão aplicadas a um elemento 
+quando há múltiplas regras conflitantes. Quanto maior a
+especificidade, maior a prioridade dessa regra.
+
+A especificidade é calculada usando uma pontuação, que é 
+baseada na origem dos seletores. A ordem dos seletores e 
+suas diferentes partes contribuem para essa pontuação. A 
+fórmula básica para calcular a especificidade é:
+    CSS Inline e !Imporant (não use)
+    ID: Cada #id tem a maior especificidade.
+    Classes, pseudo-classes e atributos: Eles têm uma 
+    especificidade média.
+    Elementos e pseudo-elementos: Eles têm a menor 
+    especificidade.
+
+    ex.: #id -> (1,0,0)
+    .class (0, 1, 0)
+
+A última regra definida é a aplicada (CSS lê de cima p/
+baixo)
+
+
+Herança no CSS
+A herança é o comportamento no qual um elemento filho 
+herda as propriedades de estilo do seu elemento pai. Nem 
+todas as propriedades de estilo são herdadas 
+automaticamente, mas algumas propriedades, como cores e
+tipografia, são herdadas por padrão.
+
+Propriedades herdadas:
+
+    color
+    font-family
+    font-size
+    line-height
+    text-align
+*/
+
+body {
+    color: purple;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+div {
+    background-color: #f00;
+}
+
+div p {
+    /*inherit força herança do pai de
+    propriedade que não é normalmente herdada */
+    background-color: inherit;
+}

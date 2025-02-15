@@ -1,0 +1,84 @@
+<!--
+Estrutura do HTML
+
+HTML (HyperText Markup Language) ->  linguagem de 
+marcação usada para estruturar páginas da web. 
+
+Arquivo HTML -> arquivo que o navegador usa p/
+renderizar coisas na página
+
+tag: "caixinha" que delimita o conteúdo dentro 
+dela, que é usada pra marcar o texto. Ela diz ao 
+navegador o significado do conteúdo e como ele deve
+ser renderizado.
+
+tag de abertura ->
+<tag atributo="valor1 valor2">
+    bla bla blabonildo -> ex.: conteúdo
+tag de fechamento ->
+</tag>
+
+<tag_de_fechamento_unico/> -> não tem conteúdo
+
+atributo="" -> propriedade que adiciona 
+informações na tag e modifica o comportamento dela
+
+emmet -> ! ou html:5
+-->
+<!-- 
+doctype -> declaração que indica ao nav. que a 
+versão do documento é o html5
+-->
+<!DOCTYPE html>
+<!-- 
+html -> tag root (raiz)
+lang="pt-br" ->  Indica o idioma da página 
+
+html é case-insensitive (br == BR)
+-->
+<html lang="pt-br">
+<!-- Cabeçalho / Metadados (informações sobre o
+    documento)-->
+<head>
+    <!-- 
+    <meta charset="UTF-8"> define a codificação de 
+    caracteres do documento.
+
+    Quando digitamos algo no computador, as letras que
+     vemos são convertidas internamente em bytes (números
+      que representam os caracteres). Para que o navegador
+      possa entender corretamente esses bytes e 
+      exibir os caracteres certos (decodificar), é 
+      necessário definir qual codificação de caracteres 
+      está sendo usada.
+
+    O UTF-8 (Unicode Transformation Format - 8 bits) é a
+     codificação mais utilizada, pois suporta 
+     praticamente todos os caracteres de todos os 
+     idiomas, incluindo acentos e símbolos especiais.
+
+    -->
+    <meta charset="UTF-8">
+    <!--
+    viewport =  área visível da página dentro da tela do
+     navegador.
+
+     A tag ajusta o tamanho da viewport em dispositivos
+      móveis, para que a pág. seja responsiva
+     
+     width=device-width -> a largura da página fica igual 
+     à largura da tela do dispositivo
+
+     initital-scale='1.0' -> nível de zoom inicial como 
+     100% 
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página que aparece na aba 
+     do nav. -->
+    <title>Document</title>
+</head>
+<!-- body -> corpo (parte vísivel) -->
+<body>
+    <p>Olá, tudo bem?</p>
+</body>
+</html>

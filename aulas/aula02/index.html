@@ -1,0 +1,70 @@
+<!--
+Atributos de id e class
+
+W3C Validator -> https://validator.w3.org/
+
+W3C ->  W3C (World Wide Web Consortium) é uma organização 
+internacional que define padrões para a web.
+Seu objetivo é garantir que os sites sejam acessíveis,
+compatíveis e funcionem corretamente em todos os 
+navegadores e dispositivos.
+
+W3C Validator é uma ferramenta online que verifica se o
+código HTML e CSS de um site está correto e segue os
+padrões da W3C.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        atributo #id => é um identificador único para um 
+        elemento. Ele não pode ser repetido na página e
+        só pode existir um único id por elemento.
+
+        * Tem maior especificidade do que class no CSS 
+        (recomendado usar class, + fácil de sobrescrever).
+
+         atributo .class =>  permite agrupar vários 
+         elementos que compartilham o mesmo estilo. 
+         Diferente do id, um mesmo class pode ser usado
+        em vários elementos E pode ter +1 class num
+         mesmo elemento.
+         
+         O !important força o estilo a ter prioridade 
+         máxima, superando id e class. NÃO USE, POIS
+         DIFICULTA MANUTENÇÃO DO CÓDIGO E É UMA MÁ
+         PRÁTICA!
+         */
+         #cabecalho-dois {
+            background: purple;
+         }
+
+         .fundo-vermelho {
+            background: red;
+         }
+
+         .bold {
+            color: deeppink;
+         }
+    </style>
+</head>
+<body>
+    <h1 id="cabecalho-um" class="fundo-vermelho borda-esquerda">
+        Vai vir aqui
+    </h1>
+    <h1 id="cabecalho-dois" class="fundo-vermelho">
+        Vai vir aqui
+    </h1>
+    <p>Um texto <b class="bold">qualquer</b></p>
+    <p>Um texto <b class="bold">qualquer</b></p>
+    <p>Um texto <b class="bold">qualquer</b></p>
+    <p>Um texto <b class="bold">qualquer</b></p>
+    <p>Um texto <b class="bold">qualquer</b></p>
+    <p>Um texto <b class="bold">qualquer</b></p>
+</body>
+</html>
