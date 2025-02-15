@@ -1,0 +1,87 @@
+<!-- 
+ Emmet Abbreviation (ferramenta integrada ao VSCode
+ que permite escrever código HTML e CSS mais 
+ rapidamente com abreviações)
+ https://docs.emmet.io/cheat-sheet/
+
+ ! / html:5 - cria estrutura básica do HTML 
+
+ .classe-um - cria div com classe de nome "classe-um"
+
+ elemento.classe.classe2 - cria elemento HTML com
+ classe "classe" e "classe2"
+
+ #nome - cria div com id "nome"
+
+ elemento#nome - cria elemento com ID "nome"
+
+ elemento{conteudo} - insere conteudo no elemento
+
+ elemento+elemento2 - adiciona elemento e elemento2 
+ após elemento
+
+ elemento1 > elemento2 - adiciona elemento1 e 
+ elemento2 dentro de elemento1
+
+ $ - cifrão é usado como um marcador numérico em 
+ repetições (é substituido por um número quando
+ usamos *)
+ div#meu-id$classe.minha-outra-classe{conteúdo}
+
+ * - asterisco é usado p/ repetir elementos
+ 
+ () - agrupa partes da abreviação
+
+ [atributo=""] - p/ colocar atributo
+
+
+ =========================|=========================
+ No CSS: digitar iniciais
+
+ jc -> justify-content
+ borr -> border-radius
+ bgc -> background-color...
+-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            background-color: #ee82ee;
+        }
+    </style>
+ </head>
+ <body>
+    <div id="meu-id" class="minha-classe minha-outra-classe">eu já posso colocar o conteúdo</div>
+
+    <!-- Gerando grupos
+    *isso gera 3 <li>  com <a> dentro, conteúdo númerado e links numeraods
+
+    ul>(li>a{Conteúdo $}[href="http://link.com/conteudo-$"])*3
+    -->
+    <ul>
+        <li><a href="http://link.com/conteudo-1">Conteúdo 1</a></li>
+        <li><a href="http://link.com/conteudo-2">Conteúdo 2</a></li>
+        <li><a href="http://link.com/conteudo-3">Conteúdo 3</a></li>
+    </ul>
+
+    <!--
+    > -> filho de
+    + -> irmão imediato
+
+    Ex.: p com span é multiplicado 3*
+    section>h1+div>(p>span{teste$})*3
+    -->
+    <section>
+        <h1></h1>
+        <div>
+            <p><span>teste1</span></p>
+            <p><span>teste2</span></p>
+            <p><span>teste3</span></p>
+        </div>
+    </section>
+ </body>
+ </html>
